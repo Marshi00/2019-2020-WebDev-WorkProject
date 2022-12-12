@@ -1,0 +1,408 @@
+@font-face {
+    font-family: "light";
+    src: url("../Font/IRANSans/IRANSans_Light.ttf");
+}
+
+@font-face {
+    font-family: "ultralight";
+    src: url("../Font/IRANSans/IRANSans_UltraLight.ttf");
+}
+
+#table01 {
+    direction: rtl;
+}
+
+.clas1 {
+    color: white;
+    height: 60px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.clas1 td:last-child, th:last-child {
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+.clas1 td:first-child, th:first-child {
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.line487 {
+    border-bottom-right-radius: 30px !important;
+    border-top-right-radius: 30px !important;
+}
+
+.line492 {
+    border-bottom-left-radius: 30px !important;
+    border-top-left-radius: 30px !important;
+}
+
+.clas1 > th {
+    background-color: #3273ed;
+    color: white;
+}
+
+.clas1:nth-child(odd) {
+    background-color: white;
+    color: black;
+    border-bottom: hidden;
+}
+
+.clas1:nth-child(even) {
+    background-color: #007bff3d;
+    color: black;
+    border: solid 1px #3273ed;
+    border-bottom: hidden;
+}
+
+.btnline479:hover {
+    cursor: pointer;
+}
+
+.btnline479 {
+    width: 100px;
+}
+
+.clas1:hover {
+    background-color: #3cc3b6;
+}
+
+td:first-child {
+    border-right: hidden !important;
+}
+
+td:last-child {
+    border-left: hidden !important;
+}
+
+.idtable:last-child {
+    width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+    #table04 {
+        width: 1000px;
+    }
+}
+
+.clas1:nth-child(odd) > td {
+    border: 1px solid #007bff3d;
+}
+
+.clas1:nth-child(even) > td {
+    border: 1px solid white;
+}
+
+.clas1 > th {
+    border: 1px solid white
+}
+
+.clas1 th:first-child {
+    border-right: none !important;
+}
+
+.clas1 th:first-child {
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.clas1 th:last-child {
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+.clas1 th:last-child {
+    border-left: none !important;
+}
+
+.clas1 th {
+    border-top: none;
+}
+
+.tthf {
+    border: hidden;
+}
+
+/*-------------------table in lottery page----------------*/
+/*same style*/
+.ltb {
+    border: hidden;
+}
+
+@media screen and (min-width: 992px) {
+    #table01 {
+        width: 1000px;
+    }
+}
+
+.divlotery {
+    float: none;
+    margin: 20px auto;
+    overflow-x: auto;
+    overflow-y: auto;
+    height: 660px;
+    margin-bottom: 70px !important;
+}
+
+/*-------------------table in history page----------------*/
+.clas1 thead:first-child {
+    border-bottom-right-radius: 30px !important;
+    border-top-right-radius: 30px !important;
+}
+
+#table04 {
+    direction: rtl;
+}
+
+.atag {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.dl81 {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.dl81 > a {
+    padding: 0 !important;
+}
+
+.dl81.aabb > a {
+    padding-right: 16px !important;
+    padding-left: 16px !important;
+}
+
+/*-------------------table in receipt page----------------*/
+.receipcls { /*body*/
+    font-family: ultralight;
+    background-color: #f4f6f9;
+    direction: rtl;
+}
+
+.thr {
+    border-right: hidden;
+    border-left: hidden;
+    border-top: hidden;
+}
+
+.thr :last-child {
+    border-bottom-left-radius: 1em;
+    border-top-left-radius: 1em;
+    /*border-left: hidden;*/
+}
+
+.thr :first-child {
+    border-bottom-right-radius: 1em;
+    border-top-right-radius: 1em;
+    /*border-right:hidden;*/
+}
+
+#table02 {
+    width: 100%;
+    direction: rtl;
+}
+
+#line52 {
+    margin: auto;
+    float: none;
+}
+
+.line53 {
+    padding-top: 20px;
+}
+
+.line54 {
+    text-align: center;
+    border: solid 1px lightgray;
+    border-radius: 2em;
+    line-height: 50px;
+    font-weight: bold;
+    font-size: 20px !important;
+}
+
+.tdreceipt {
+    font-weight: bold !important;
+}
+
+.dl24 {
+    float: none;
+    margin: auto;
+    margin-top: 100px !important;
+    overflow-y: auto;
+    height: 300px;
+
+}
+
+/*------------id editing-------------*/
+.idinput, select {
+    direction: rtl;
+    padding-right: 5px;
+    width: 33%;
+    height: 40px;
+    padding-left: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 200px;
+    height: 60px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/*--------info editing----------*/
+.icon47 {
+    font-size: 1.5vw !important;
+}
+
+.reminder {
+    opacity: 1 !important;
+    width: 80% !important;
+    font-weight: unset !important;
+}
+
+/*--------winners page----------*/
+.winnerpage {
+    font-family: ultralight;
+    direction: rtl;
+    background-color: #f4f6f9;
+}
+
+
+.thw {
+    border: hidden !important;
+}
+
+#table03 {
+    width: 100%;
+    direction: rtl;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance: textfield; /* Firefox */
+}
+
+.dl244 {
+    float: none;
+    margin: auto;
+    margin-top: 100px !important;
+    overflow-x: auto;
+    height: 400px;
+}
+
+.clas1 > td {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.clas1 > th {
+    text-align: center;
+}
+
+/*----------login page----------*/
+/*--------alert box------*/
+.alert {
+    padding: 20px;
+    background-color: red;
+    color: white;
+    border-radius: 1.5em;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+.alert.success {
+    background-color: #4CAF50;
+    visibility: hidden;
+    font-size: 18px !important;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+.alert.warning {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: none;
+    font-size: 18px !important;
+}
+
+.fa-phone, .fa-lock {
+    font-size: 1.5vw;
+}
+
+
+.btnl59 {
+    border-radius: 2em !important;
+}
+
+.btnl59:hover {
+    box-shadow: 0px 5px 11px 3px #504783;
+}
+
+/*-----------------nav_bar--------------------*/
+.aaa {
+    padding-right: 10px;
+}
+
+.aaa1 {
+    padding-right: 13px;
+}
+
+.aaa2 {
+    padding-right: 14px;
+}
+
+.aaa3 {
+    padding-right: 18px;
+}
+
+aside {
+    overflow-x: hidden;
+}
+
+/*-----------------my point---------------*/
+@media screen and (min-width: 768px) {
+    .abcd {
+        margin-right: 4.45% !important;
+    }
+}
+
+/*-----------------------total tyle----------------------*/
+.wrapper {
+    background-color: #f4f6f9;
+}

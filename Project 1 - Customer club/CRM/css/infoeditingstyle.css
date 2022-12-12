@@ -1,0 +1,114 @@
+@font-face {
+    font-family: "medium";
+    src: url("../Font/IRANSans/IRANSans_medium.ttf");
+}
+body{
+    font-family: medium !important;
+    font-size: 12px!important;
+    border-radius: 5px !important;
+    background-color: #f2f2f2 !important;
+}
+input[type=text], select {
+    direction: rtl;
+    padding-right: 5px;
+    width: 33%;
+    height:40px;
+    padding-left:5px;
+    margin-bottom: 5px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=submit] {
+    width: 200px;
+    height: 60px;
+    display: block;
+    margin: auto;
+    border-radius: 2em;
+    outline: none;
+    border: none;
+    font-size: 20px;
+}
+input[type=submit]:hover{
+    box-shadow: 0px 10px 13px 0.5px grey ;
+}
+.div01 {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+.inputinfo{
+    height: 50px !important;
+    display: block !important;
+    margin: auto;
+    width: 400px !important;
+    border-radius: 2em !important;
+    border: 1px solid lightgray;
+    margin-bottom: 10px !important;
+    direction: rtl;
+    padding-right: 20px!important;
+    outline: none;
+    font-size: 15px!important;
+}
+.divbtn52{
+    float: none !important;
+    margin: auto !important;
+    padding-top: 30px ;
+}
+#A6{
+    color: rgba(117, 117, 117, 1);
+}
+#A7{
+    color: rgba(117, 117, 117, 1);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+/*----------alert box--------*/
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-bottom: 0 !important;
+    margin-top: 10px ;
+}
+.alert.success {background-color: #4CAF50;margin-top: 10px;}
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.closebtn:hover {
+    color: black;
+}
+.alert.success {
+    text-align: center;
+    font-size: 20px;
+    visibility: hidden;
+    margin-left: 400px;
+    margin-right: 400px;
+    border-radius: 1.5em;
+}
+.alert.warning {
+    text-align: center;
+    font-size: 20px;
+    display: none;
+    margin-left: 400px;
+    margin-right: 400px;
+    border-radius: 1.5em;
+}
