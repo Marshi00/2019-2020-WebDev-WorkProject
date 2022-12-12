@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../../Css/Bootstrap.css" rel="stylesheet">
+    <script src="../../Js/JQuery.js"></script>
+    <script src="../../Js/Bootstrap.js"></script>
+</head>
+<body>
+<div CLASS="col-sm-8 col-xs-8 col-md-6 col-lg-6 col-sm-offset-2 col-xs-offset-2 col-md-offset-3 col-lg-offset-3" style="text-align: center;margin-top: 300px">
+
+    <div class="alert alert-success" id="Success" style="visibility: hidden">
+        <strong>Success!</strong> Indicates a successful or positive action.
+    </div>
+    <div class="alert alert-danger" id="Wrong" style="display: none">
+        <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+    </div>
+    <input type="button" class="btn-primary" onclick="sendParams()" value="Submit" style="padding: 5px 100px">
+</div>
+<script>
+    function sendParams() {
+        var name,LastName,NationalCode,Address,FixedPhoneNumber,Gender,DateOfBirth,Password,DateOfMarriage,InviterID,ConfirmPassword;
+        name=document.getElementById('A1').value;
+        LastName=document.getElementById('A2').value;
+        NationalCode=document.getElementById('A3').value;
+        Address=document.getElementById('A4').value;
+        FixedPhoneNumber=document.getElementById('A5').value;
+        Gender=document.getElementById('A6').value;
+        DateOfBirth=document.getElementById('A7').value;
+        Password=document.getElementById('A8').value;
+        DateOfMarriage=document.getElementById('A9').value;
+        InviterID=document.getElementById('A10').value;
+        ConfirmPassword=document.getElementById('A11').value;
+        if (name==''){
+            document.getElementById('A1').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='لطفا نام خود را وارد کنیذ';
+            return;
+        }
+        if (LastName==''){
+            document.getElementById('A2').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='لطفا نام خانوادگی خود را وارد کنیذ';
+            return;
+        }
+        if (NationalCode==''){
+            document.getElementById('A3').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='لطفا کد ملی خود را وارد کنیذ';
+            return;
+        }
+        if (Address==''){
+            document.getElementById('A4').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='لطفا آدرس خود را وارد کنیذ';
+            return;
+        }
+        if (FixedPhoneNumber==''){
+            document.getElementById('A5').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='لطفا شماره تلفن ثابت خود را وارد کنیذ';
+            return;
+        }
+        if (Gender==''){
+            document.getElementById('A6').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='لطفا جنسیت خود را وارد کنیذ';
+            return;
+        }
+        if (DateOfBirth==''){
+            document.getElementById('A7').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='لطفا تاریخ تولد خود را وارد کنیذ';
+            return;
+        }
+        if (Password==''){
+            document.getElementById('A8').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='لطفا گذر واژه خود را وارد کنیذ';
+            return;
+        }
+        if (ConfirmPassword==''){
+            document.getElementById('A11').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='لطفا تکرار گذر واژه خود را وارد کنیذ';
+            return;
+        }
+        if (ConfirmPassword!=Password) {
+            alert("گذر واژه ها مطایقت ندارند.") ;
+            return;
+        }
+        $.ajax({
+            url: "3-2UPdateUserDavin.php",
+            data:{
+                name:name,
+                LastName:LastName,
+                NationalCode:NationalCode,
+                Address:Address,
+                FixedPhoneNumber:FixedPhoneNumber,
+                Gender:Gender,
+                DateOfBirth:DateOfBirth,
+                Password:Password,
+                DateOfMarriage:DateOfMarriage,
+                InviterID:InviterID,
+            },
+            dataType:"json",
+            type:"POST",
+            success : function (jsonData) {
+                if (jsonData['error']){
+                    document.getElementById('Success').style.visibility='hidden';
+                    document.getElementById('Wrong').style.display='block';
+                    document.getElementById('Wrong').innerText=jsonData['MSG'];
+                }
+                else {
+                    document.getElementById('Success').style.visibility='visible';
+                    // document.getElementById('Success').innerText=jsonData['name'];
+                    // window.location.href="index.php";
+                }
+
+            }
+        });
+
+    }
+</script>
+</body>
+</html>
