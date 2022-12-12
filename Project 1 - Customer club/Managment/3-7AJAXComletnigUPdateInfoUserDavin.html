@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SUbmitUserDavin</title>
+    <link href="../../Css/Bootstrap.css" rel="stylesheet">
+    <script src="../../Js/JQuery.js"></script>
+    <script src="../../Js/Bootstrap.js"></script>
+</head>
+<body>
+<div CLASS="col-sm-8 col-xs-8 col-md-6 col-lg-6 col-sm-offset-2 col-xs-offset-2 col-md-offset-3 col-lg-offset-3" style="text-align: center;margin-top: 300px">
+
+    <div class="alert alert-success" id="Success" style="visibility: hidden">
+        <strong>Success!</strong> Indicates a successful or positive action.
+    </div>
+    <div class="alert alert-danger" id="Wrong" style="display: none">
+        <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+    </div>
+    <input type="button" class="btn-primary" onclick="sendParams()" value="Submit" style="padding: 5px 100px">
+</div>
+<script>
+    function sendParams() {
+        var name,LastName,NationalCode,DateOfMarriage,Address,FixedPhoneNumber,Gender,DateOfBirth,InviterID;
+        name=document.getElementById('A1').value;
+        LastName=document.getElementById('A2').value;
+        NationalCode=document.getElementById('A3').value;
+        DateOfMarriage=document.getElementById('A4').value;
+        Address=document.getElementById('A5').value;
+        FixedPhoneNumber=document.getElementById('A6').value;
+        Gender=document.getElementById('A7').value;
+        DateOfBirth=document.getElementById('A8').value;
+        InviterID=document.getElementById('A9').value;
+        if (name==''){
+            document.getElementById('A1').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='PLease enter your email';
+            return;
+        }
+        if (LastName==''){
+            document.getElementById('A2').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='PLease enter your email';
+            return;
+        }
+        if (NationalCode==''){
+            document.getElementById('A3').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='PLease enter your email';
+            return;
+        }
+        if (Address==''){
+            document.getElementById('A5').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='PLease enter your email';
+            return;
+        }
+        if (FixedPhoneNumber==''){
+            document.getElementById('A6').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='PLease enter your email';
+            return;
+        }
+        if (Gender==''){
+            document.getElementById('A7').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='PLease enter your email';
+            return;
+        }
+        if (DateOfBirth==''){
+            document.getElementById('A8').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='PLease enter your email';
+            return;
+        }
+
+        $.ajax({
+            url: "3-3CompletingUPdateInfoUserDavin.php",
+            data:{
+                Password:Password,
+                PhoneNumber:PhoneNumber,
+            },
+            dataType:"json",
+            type:"POST",
+            success : function (jsonData) {
+                if (jsonData['error']){
+                    document.getElementById('Success').style.visibility='hidden';
+                    document.getElementById('Wrong').style.display='block';
+                    document.getElementById('Wrong').innerText=jsonData['MSG'];
+                }
+                else {
+                    document.getElementById('Success').style.visibility='visible';
+                    // document.getElementById('Success').innerText=jsonData['name'];
+                    // window.location.href="index.php";
+                }
+
+            }
+        });
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UpdateCompanyContractTable</title>
+    <link href="../../Css/Bootstrap.css" rel="stylesheet">
+    <script src="../../Js/JQuery.js"></script>
+    <script src="../../Js/Bootstrap.js"></script>
+</head>
+<body>
+<div CLASS="col-sm-8 col-xs-8 col-md-6 col-lg-6 col-sm-offset-2 col-xs-offset-2 col-md-offset-3 col-lg-offset-3" style="text-align: center;margin-top: 300px">
+
+    <div class="alert alert-success" id="Success" style="visibility: hidden">
+        <strong>Success!</strong> Indicates a successful or positive action.
+    </div>
+    <div class="alert alert-danger" id="Wrong" style="display: none">
+        <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+    </div>
+    <input type="button" class="btn-primary" onclick="sendParams()" value="Submit" style="padding: 5px 100px">
+</div>
+<script>
+    function sendParams() {
+        var CompanyName,CompanyID,InstallmentPeriod,$StartDate,$ExpDate,$InstallmentNumbers,$PaymentAmount;
+        CompanyName=document.getElementById('A1').value;
+        CompanyID=document.getElementById('A2').value;
+        InstallmentPeriod=document.getElementById('A2').value;
+        $StartDate=document.getElementById('A2').value;
+        $ExpDate=document.getElementById('A2').value;
+        $InstallmentNumbers=document.getElementById('A2').value;
+        $PaymentAmount=document.getElementById('A2').value;
+        if (CompanyName==''){
+            document.getElementById('A1').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='PLease enter your email';
+            return;
+        }
+        if (CompanyID==''){
+            document.getElementById('A2').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='PLease enter your email';
+            return;
+        }
+        if (InstallmentPeriod==''){
+            document.getElementById('A3').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='PLease enter your email';
+            return;
+        }
+        if ($StartDate==''){
+            document.getElementById('A4').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='PLease enter your email';
+            return;
+        }
+        if ($ExpDate==''){
+            document.getElementById('A5').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='PLease enter your email';
+            return;
+        }
+        if ($InstallmentNumbers==''){
+            document.getElementById('A6').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='PLease enter your email';
+            return;
+        }
+        if ($PaymentAmount==''){
+            document.getElementById('A7').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='PLease enter your email';
+            return;
+        }
+        $.ajax({
+            url: "4-2UPdateCompanyContractTableDavin.php",
+            data:{
+                CompanyName:CompanyName,
+                CompanyID:CompanyID,
+                InstallmentPeriod:InstallmentPeriod,
+                $StartDate:$StartDate,
+                $ExpDate:$ExpDate,
+                $InstallmentNumbers:$InstallmentNumbers,
+                $PaymentAmount:$PaymentAmount,
+            },
+            dataType:"json",
+            type:"POST",
+            success : function (jsonData) {
+                if (jsonData['error']){
+                    document.getElementById('Success').style.visibility='hidden';
+                    document.getElementById('Wrong').style.display='block';
+                    document.getElementById('Wrong').innerText=jsonData['MSG'];
+                }
+                else {
+                    document.getElementById('Success').style.visibility='visible';
+                    // document.getElementById('Success').innerText=jsonData['name'];
+                    // window.location.href="index.php";
+                }
+
+            }
+        });
+
+    }
+</script>
+</body>
+</html>

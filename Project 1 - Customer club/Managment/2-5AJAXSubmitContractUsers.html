@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SubmitContractUsers</title>
+    <link href="../../Css/Bootstrap.css" rel="stylesheet">
+    <script src="../../Js/JQuery.js"></script>
+    <script src="../../Js/Bootstrap.js"></script>
+</head>
+<body>
+<div CLASS="col-sm-8 col-xs-8 col-md-6 col-lg-6 col-sm-offset-2 col-xs-offset-2 col-md-offset-3 col-lg-offset-3" style="text-align: center;margin-top: 300px">
+
+    <div class="alert alert-success" id="Success" style="visibility: hidden">
+        <strong>Success!</strong> Indicates a successful or positive action.
+    </div>
+    <div class="alert alert-danger" id="Wrong" style="display: none">
+        <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+    </div>
+    <input type="button" class="btn-primary" onclick="sendParams()" value="Submit" style="padding: 5px 100px">
+</div>
+<script>
+    function sendParams() {
+        var Password,PhoneNumber,Name,LastName,NationalCode,DateOfMarriage,Address,FixedPhoneNumber,CompanyID,ContractID,CompanyName,Gender;
+        Password=document.getElementById('A1').value;
+        PhoneNumber=document.getElementById('A2').value;
+        Name=document.getElementById('A3').value;
+        LastName=document.getElementById('A4').value;
+        NationalCode=document.getElementById('A5').value;
+        DateOfMarriage=document.getElementById('A6').value;
+        Address=document.getElementById('A7').value;
+        FixedPhoneNumber=document.getElementById('A8').value;
+        CompanyID=document.getElementById('A9').value;
+        ContractID=document.getElementById('A9').value;
+        CompanyName=document.getElementById('A9').value;
+        Gender=document.getElementById('A9').value;
+        if (Password==''){
+            document.getElementById('A1').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='PLease enter your email';
+            return;
+        }
+        if (PhoneNumber==''){
+            document.getElementById('A2').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='PLease enter your email';
+            return;
+        }
+        if (Name==''){
+            document.getElementById('A3').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='PLease enter your email';
+            return;
+        }
+        if (LastName==''){
+            document.getElementById('A4').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='PLease enter your email';
+            return;
+        }
+        if (NationalCode==''){
+            document.getElementById('A5').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='PLease enter your email';
+            return;
+        }
+        if (DateOfMarriage==''){
+            document.getElementById('A6').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='PLease enter your email';
+            return;
+        }
+        if (Address==''){
+            document.getElementById('A7').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='PLease enter your email';
+            return;
+        }
+        if (FixedPhoneNumber==''){
+            document.getElementById('A8').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='PLease enter your email';
+            return;
+        }
+        if (CompanyID==''){
+            document.getElementById('A9').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='PLease enter your password';
+            return;
+        }
+        if (ContractID==''){
+            document.getElementById('A10').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='PLease enter your password';
+            return;
+        }
+        if (CompanyName==''){
+            document.getElementById('A11').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='PLease enter your password';
+            return;
+        }
+        if (Gender==''){
+            document.getElementById('A12').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='PLease enter your password';
+            return;
+        }
+        $.ajax({
+            url: "2-1SubmitContractUsersDavin.php",
+            data:{
+                Password:Password,
+                PhoneNumber:PhoneNumber,
+                Name:Name,
+                LastName:LastName,
+                NationalCode:NationalCode,
+                DateOfMarriage:DateOfMarriage,
+                Address:Address,
+                FixedPhoneNumber:FixedPhoneNumber,
+                CompanyID:CompanyID,
+                ContractID:ContractID,
+                CompanyName:CompanyName,
+                Gender:Gender,
+            },
+            dataType:"json",
+            type:"POST",
+            success : function (jsonData) {
+                if (jsonData['error']){
+                    document.getElementById('Success').style.visibility='hidden';
+                    document.getElementById('Wrong').style.display='block';
+                    document.getElementById('Wrong').innerText=jsonData['MSG'];
+                }
+                else {
+                    document.getElementById('Success').style.visibility='visible';
+                    // document.getElementById('Success').innerText=jsonData['name'];
+                    // window.location.href="index.php";
+                }
+
+            }
+        });
+
+    }
+</script>
+</body>
+</html>

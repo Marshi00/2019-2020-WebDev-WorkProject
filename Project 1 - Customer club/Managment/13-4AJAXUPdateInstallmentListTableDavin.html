@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../../Css/Bootstrap.css" rel="stylesheet">
+    <script src="../../Js/JQuery.js"></script>
+    <script src="../../Js/Bootstrap.js"></script>
+</head>
+<body>
+<div CLASS="col-sm-8 col-xs-8 col-md-6 col-lg-6 col-sm-offset-2 col-xs-offset-2 col-md-offset-3 col-lg-offset-3" style="text-align: center;margin-top: 300px">
+
+    <div class="alert alert-success" id="Success" style="visibility: hidden">
+        <strong>Success!</strong> Indicates a successful or positive action.
+    </div>
+    <div class="alert alert-danger" id="Wrong" style="display: none">
+        <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+    </div>
+    <input type="button" class="btn-primary" onclick="sendParams()" value="Submit" style="padding: 5px 100px">
+</div>
+<script>
+    function sendParams() {
+        var PaymentStatus,PaymentAmount,PaymentDate,DueDate,ContractUserID;
+        PaymentStatus=document.getElementById('A1').value;
+        PaymentAmount=document.getElementById('A2').value;
+        PaymentDate=document.getElementById('A3').value;
+        DueDate=document.getElementById('A4').value;
+        ContractUserID=document.getElementById('A5').value;
+        if (PaymentStatus==''){
+            document.getElementById('A1').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='PLease enter your email';
+            return;
+        }
+        if (PaymentAmount==''){
+            document.getElementById('A2').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='PLease enter your email';
+            return;
+        }
+        if (PaymentDate==''){
+            document.getElementById('A3').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='PLease enter your email';
+            return;
+        }
+        if (DueDate==''){
+            document.getElementById('A4').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='PLease enter your email';
+            return;
+        }
+        if (ContractUserID==''){
+            document.getElementById('A5').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='PLease enter your email';
+            return;
+        }
+        $.ajax({
+            url: "13-2UPdateInstallmentListTableDavin.php",
+            data:{
+                PaymentStatus:PaymentStatus,
+                PaymentAmount:PaymentAmount,
+                PaymentDate:PaymentDate,
+                DueDate:DueDate,
+                ContractUserID:ContractUserID,
+            },
+            dataType:"json",
+            type:"POST",
+            success : function (jsonData) {
+                if (jsonData['error']){
+                    document.getElementById('Success').style.visibility='hidden';
+                    document.getElementById('Wrong').style.display='block';
+                    document.getElementById('Wrong').innerText=jsonData['MSG'];
+                }
+                else {
+                    document.getElementById('Success').style.visibility='visible';
+                    // document.getElementById('Success').innerText=jsonData['name'];
+                    // window.location.href="index.php";
+                }
+
+            }
+        });
+
+    }
+</script>
+</body>
+</html>
