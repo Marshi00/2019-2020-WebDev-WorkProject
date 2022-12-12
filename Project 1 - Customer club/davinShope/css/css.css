@@ -1,0 +1,6 @@
+@charset "UTF-8";       /* Set the encoding of the style sheet to Unicode UTF-8 */
+* , body , body:before , body:after , *:after ,*:before , html , html:before , html:after{
+    margin: 0;
+    padding: 0;
+    font-family: IRANSANSFANNUMUlFaNum !important;
+}
