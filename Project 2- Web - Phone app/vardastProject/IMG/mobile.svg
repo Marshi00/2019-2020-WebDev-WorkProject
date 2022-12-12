@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="331.167" height="660.028" viewBox="0 0 331.167 660.028">
+  <g id="Group_25" data-name="Group 25" transform="translate(-501.864 -5901.027)">
+    <g id="Rectangle_20" data-name="Rectangle 20" transform="translate(501.864 5901.027)" stroke="#707070" stroke-width="1">
+      <rect width="331.167" height="660.028" rx="74" stroke="none"/>
+      <rect x="0.5" y="0.5" width="330.167" height="659.028" rx="73.5" fill="none"/>
+    </g>
+    <g id="Rectangle_18" data-name="Rectangle 18" transform="translate(508.443 5911.053)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="318.739" height="639.977" rx="62" stroke="none"/>
+      <rect x="0.5" y="0.5" width="317.739" height="638.977" rx="61.5" fill="none"/>
+    </g>
+    <g id="Rectangle_19" data-name="Rectangle 19" transform="translate(574.969 5911.053)" fill="#fff" stroke="#707070" stroke-width="1">
+      <path d="M0,0H186.418a0,0,0,0,1,0,0V35.674a20,20,0,0,1-20,20H20a20,20,0,0,1-20-20V0A0,0,0,0,1,0,0Z" stroke="none"/>
+      <path d="M1,.5H185.418a.5.5,0,0,1,.5.5V35.674a19.5,19.5,0,0,1-19.5,19.5H20A19.5,19.5,0,0,1,.5,35.674V1A.5.5,0,0,1,1,.5Z" fill="none"/>
+    </g>
+    <g id="Ellipse_6" data-name="Ellipse 6" transform="translate(720.448 5932.775)" fill="#524f4f" stroke="#707070" stroke-width="1">
+      <ellipse cx="5.483" cy="6.266" rx="5.483" ry="6.266" stroke="none"/>
+      <ellipse cx="5.483" cy="6.266" rx="4.983" ry="5.766" fill="none"/>
+    </g>
+    <g id="Rectangle_21" data-name="Rectangle 21" transform="translate(610.79 5936.118)" fill="#4e4949" stroke="#707070" stroke-width="1">
+      <path d="M3.342,0H77.074a3.342,3.342,0,0,1,3.342,3.342v0a3.342,3.342,0,0,1-3.342,3.342H2.674A2.674,2.674,0,0,1,0,4.01V3.342A3.342,3.342,0,0,1,3.342,0Z" stroke="none"/>
+      <path d="M3.342.5H77.074a2.842,2.842,0,0,1,2.842,2.842v0a2.842,2.842,0,0,1-2.842,2.842H2.71A2.21,2.21,0,0,1,.5,3.973V3.342A2.842,2.842,0,0,1,3.342.5Z" fill="none"/>
+    </g>
+  </g>
+</svg>
