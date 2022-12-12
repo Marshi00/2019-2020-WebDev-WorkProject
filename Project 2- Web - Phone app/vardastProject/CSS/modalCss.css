@@ -1,0 +1,682 @@
+/*******************fonts*******************/
+@font-face {font-family:"IRANSans";src: url('../font/ttf/IRANSansWeb(FaNum).ttf');}@font-face {font-family:"IRANSans_Black";src: url('../font/ttf/IRANSansWeb(FaNum)_Black.ttf');  }  @font-face {font-family:"IRANSans_Bold"; src: url('../font/ttf/IRANSansWeb(FaNum)_Bold.ttf');} @font-face{font-family:"IRANSans_Light"; src: url('../font/ttf/IRANSansWeb(FaNum)_Light.ttf');  } @font-face {font-family:"IRANSans_Medium";src: url('../font/ttf/IRANSansWeb(FaNum)_Medium.ttf');  } @font-face {font-family:"IRANSans_UltraLight";src: url('../font/ttf/IRANSansWeb(FaNum)_UltraLight.ttf');} .SansLight{font-family:"IRANSans_Light";} .SansBold{font-family:"IRANSans_Bold";}.Sansblack{font-family:"IRANSans_Black";}  .SansMedium{font-family:"IRANSans_Medium";} .SansUltraLight{font-family:"IRANSans_UltraLight";}  .IRANSans{font-family:"IRANSans";}
+/*******************fonts*******************/
+/*#center {*/
+  /*text-align: center;*/
+  /*display: flex;*/
+  /*align-items: center;*/
+  /*justify-content: center;*/
+  /*direction: rtl;*/
+/*}*/
+/*.modall {*/
+  /*background: white;*/
+  /*border: 1px solid #9c9c9c;*/
+  /*position: relative;*/
+  /*width: 50%;*/
+  /*height: max-content;*/
+  /*overflow: hidden;*/
+/*}*/
+/*.headerModall {*/
+  /*display: grid;*/
+  /*grid-template-columns: repeat(3, 33%);*/
+  /*border-bottom: 1px solid #9c9c9c;*/
+/*}*/
+/*.headerModall span,*/
+/*.headerModall p {*/
+  /*padding-bottom: 2%;*/
+  /*padding-top: 10%;*/
+  /*font-size: 20px;*/
+
+/*}*/
+/*#borderGreen {*/
+  /*transform: translateX(100%);*/
+  /*height: 10px;*/
+  /*border-top-left-radius: 20px;*/
+  /*border-bottom-left-radius: 20px;*/
+  /*background: green;*/
+  /*z-index: 555;*/
+  /*transition: transform 1s ease;*/
+  /*margin-top: -0.5rem;*/
+/*}*/
+/*#alldivsModal {*/
+  /*position: relative;*/
+  /*width: 100%;*/
+  /*height: 60rem;*/
+  /*overflow: hidden;*/
+  /*display: flex;*/
+  /*transition: transform 0.5s ease;*/
+/*}*/
+
+/*#onePopUp,*/
+/*#twoPopUp,*/
+/*#threePopUp {*/
+  /*!* position: absolute; *!*/
+/*}*/
+/*#onePopUp {*/
+  /*transform: translateX(0px);*/
+  /*z-index: 3;*/
+  /*background: white;*/
+  /*width: 100%;*/
+  /*height: 100%;*/
+/*}*/
+/*#twoPopUp {*/
+  /*transform: translateX(0px);*/
+  /*z-index: 2;*/
+  /*background: white;*/
+  /*width: 100%;*/
+  /*height: 100%;*/
+/*}*/
+/*#threePopUp {*/
+  /*transform: translateX(0px);*/
+  /*z-index: 1;*/
+  /*background: white;*/
+  /*width: 100%;*/
+  /*height: 100%;*/
+/*}*/
+/*.closeSS{*/
+  /*cursor: pointer;*/
+  /*margin-left: 54%;*/
+/*}*/
+/*#numberPageModal{*/
+  /*margin-right: 54%;*/
+/*}*/
+
+ .mytime{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.time-picker{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 230px;
+  /*background-color:yellow;*/
+  border-radius: 8px;
+  /*box-shadow: 0 0 6px rgba(0,0,0,.2);*/
+  color: #4abe82;
+  font-size: 40px;
+  font-weight:400;
+  user-select: none;
+  margin: 0 auto;
+  padding: 25px 15px;
+}
+.time-picker .hour,
+.time-picker .minute {
+  position: relative;
+  min-width: 60px;
+  text-align: center;
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  border: 1px solid #9c9c9c;
+  border-radius: 40px;
+
+}
+.time-picker .hour .hr,
+.time-picker .minute .min {
+  background: none;
+  font-size:36px;
+  appearance: none;
+  border: none;
+  outline: none;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.time-picker .hour .hr-up,
+.time-picker .hour .hr-down,
+.time-picker .minute .min-down,
+.time-picker .minute .min-up {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0px;
+  height: 0px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  cursor: pointer;
+}
+.time-picker .hour .hr-up,
+.time-picker .minute .min-up {
+  top: -27px;
+  border-bottom: 17px solid #aaa;
+}
+.time-picker .hour .hr-down,
+.time-picker .minute .min-down {
+  bottom: -27px;
+  border-top: 17px solid #aaa;
+}
+.time-picker .hour .hr-up:hover,
+.time-picker .hour .hr-down:hover,
+.time-picker .minute .min-down:hover,
+.time-picker .minute .min-up:hover{
+  border-bottom-color: black;
+  border-top-color: black;
+}
+.saat{
+  margin-right:10rem;
+}
+.separator{
+  margin: 0 1rem;
+}
+.myP{
+  font-size: 15px;
+  margin: 4rem 0;
+}
+.divScroll{
+  overflow-y: scroll;
+}
+/* width */
+.divScroll::-webkit-scrollbar {
+  width: 12px;
+}
+/* Track */
+.divScroll::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+/* Handle */
+.divScroll::-webkit-scrollbar-thumb {
+  background: #bdbcbc;
+  border-radius: 10px;
+}
+/* Handle on hover */
+.divScroll::-webkit-scrollbar-thumb:hover {
+  background: #4abe82;
+}
+
+/*************************************************/
+
+.txt-MN1{
+  margin-right: 4rem;
+  font-size: 15px;
+  margin-top: .5rem;
+}
+.modal-header {
+  padding: 22px !important;
+  text-align: center;
+}
+.modal-body{
+  text-align: right;
+  direction: rtl;
+  font-size: 17px;
+}
+.edameBtn1 {
+  padding: 10px 32px;
+  margin-bottom: 3rem;
+  margin-left: 2rem;
+  border: 2px solid #4abe82;
+  border-radius: 10px;
+  background-color: #4abe82;
+  text-align: center;
+  direction: rtl;
+  height: 58px;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+.edameBtn1:hover,
+.edameBtn1:focus {
+  outline: none;
+}
+.modal-footer {
+  border-top: none;
+  text-align: center;
+}
+.styleH4{
+  font-weight: bold;
+}
+.CLicon{
+  font-size: 14px;
+  margin-right: 9px;
+}
+.CRicon{
+  font-size: 14px;
+  margin-left: 6px;
+}
+/*****2/6*****/
+.modal-body2 {
+  padding-bottom: 140px;
+  /* padding: 41px 28px; */
+  padding-right: 28px;
+  padding-left: 28px;
+}
+
+.tozihat {
+  width: 100%;
+  height: 210px;
+  border: 1px solid #bfbfbf;
+}
+/*****3/6*****/
+
+.parent-calendar {
+  margin: 0;
+  /* padding: 0; */
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  /* height: 56vh; */
+  padding-top: 16px;
+  padding-bottom: 28px;
+}
+.calendar {
+  width: 450px;
+  height: auto;
+  box-sizing: border-box;
+}
+.calendar .date {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-gap: 27px;
+  box-sizing: border-box;
+  grid-template-rows: repeat(4, 4rem);
+}
+.calendar .date div {
+  display: grid;
+  text-align: center;
+  color: white;
+  grid-template-columns: repeat(1, 100%);
+  height: 6rem;
+}
+.calendar .date .number {
+  background-color: #d2d2d2;
+  border-radius: 30px;
+  padding: 3px;
+  cursor: pointer;
+}
+/*.calendar .date  div.number.active,*/
+.calendar .date div.number:hover {
+  background-color: #4abe82 !important;
+  cursor: pointer;
+}
+/*******saat********/
+
+/*****4/6******/
+/* width */
+.first-div::-webkit-scrollbar {
+  width: 12px;
+}
+/* Track */
+.first-div::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+/* Handle */
+.first-div::-webkit-scrollbar-thumb {
+  background: #bdbcbc;
+  border-radius: 10px;
+}
+/* Handle on hover */
+.first-div::-webkit-scrollbar-thumb:hover {
+  background: #4abe82;
+}
+.parent-map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+.btn-sabt-mogheiiyat {
+  position: absolute;
+  /*z-index: 1003;*/
+  top: 426px;
+}
+
+#mapid {
+  height: 500px;
+  width: 90%;
+  float: none;
+  margin: auto;
+}
+.input-address {
+  margin-top: 2rem;
+  width: 90%;
+  height: 70px;
+  border-radius: 15px;
+  border: 1px solid #cbcbcb;
+  padding: 8px 10px;
+}
+.input-address:hover,
+.input-address:focus {
+  outline: none;
+}
+/*-----------------------style placeholder navbar search-------------------------*/
+.input-address::-webkit-input-placeholder {
+  font-family: IRANSans;
+  font-size: 20px;
+  color: #b2b2b2;
+  padding-right: 20px;
+}
+
+.input-address:-moz-placeholder {
+  font-family: IRANSans;
+  font-size: 20px;
+  color: #b2b2b2;
+  padding-right: 20px;
+}
+
+.input-address::-moz-placeholder {
+  font-family: IRANSans;
+  font-size: 20px;
+  color: #b2b2b2;
+  padding-right: 20px;
+}
+
+.input-address:-ms-input-placeholder {
+  font-family: IRANSans;
+  font-size: 20px;
+  color: #b2b2b2;
+  padding-right: 20px;
+}
+
+/*-----------------------color placeholder-------------------------*/
+.btn-afzoodan {
+  margin-top: 2rem;
+  border: 2px solid #4abe82;
+  border-radius: 10px;
+  background-color: #4abe82;
+  text-align: center;
+  direction: rtl;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+.btn-afzoodan:hover,
+:focus {
+  outline: none;
+}
+.btn-afzoodan:hover {
+}
+.map-pic {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  width: 100%;
+  height: 120px;
+}
+.myadress {
+  padding: 10px 20px;
+}
+.myadress2 {
+  padding-right: 30px;
+  text-align: right;
+  direction: rtl;
+}
+
+.parent-adress {
+  padding: 17px 10px;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  margin-top: 2rem;
+  color: #4abe82;
+}
+.parent-adress:hover {
+  background-color: #4abe82;
+  color: white;
+}
+
+.first-div {
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 360px;
+  /* direction: rtl; */
+  width: 90%;
+  float: none;
+  margin: auto;
+  padding: 0 10px;
+}
+
+.takhfif-p {
+  margin-top: 6px;
+}
+
+/***5/6***/
+.takhfif-p::-webkit-input-placeholder {
+  color: #b2b2b2;
+}
+
+.takhfif-p:-moz-placeholder {
+  color: #b2b2b2;
+}
+
+.takhfif-p::-moz-placeholder {
+  color: #b2b2b2;
+}
+
+.takhfif-p:-ms-input-placeholder {
+  color: #b2b2b2;
+}
+
+.khdmt {
+  margin-top: 1rem;
+}
+.code-alert {
+  color: red;
+  font-weight: bold;
+  padding-right: 90px;
+}
+.code-input {
+  color: black;
+  font-size: 15px;
+  font-weight: normal;
+  border: 1px solid darkgrey;
+  padding: 10px 20px;
+  border-radius: 22px;
+  margin-top: 0;
+}
+.joziiyat-sefaresh {
+  font-size: 13px;
+  padding: 10px 30px;
+  color: black;
+  margin-top: 3rem;
+  float: right;
+}
+.mycheckbox {
+  border-radius: 19px;
+  border: 1px solid #b5b3b3;
+  padding: 14px 22px;
+  font-size: 16px;
+}
+/****6/6****/
+.ravesh-pardakht {
+  text-align: left;
+  margin-top: 3rem;
+  font-size: 15px;
+  color: darkgray;
+}
+.toggle > input[type="checkbox"] {
+  position: relative;
+  width: 110px;
+  height: 50px;
+  background-color: darkgray;
+  -webkit-appearance: none;
+  border-radius: 50px;
+  outline: none;
+  transition: 0.4s;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.toggle > input:checked[type="checkbox"] {
+  background-color: #4abe82;
+}
+.toggle > input[type="checkbox"]::before {
+  z-index: 2;
+  position: absolute;
+  content: "";
+  left: 5px;
+  width: 42px;
+  height: 42px;
+  background-color: white;
+  border-radius: 50%;
+  transform: scale(1.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.4s;
+  top: 3px;
+}
+.toggle > input:checked[type="checkbox"]::before {
+  left: 62px;
+}
+.toggle {
+  position: relative;
+  display: inline;
+}
+.toggle > label {
+  position: absolute;
+  color: white;
+  font-weight: 600;
+  font-size: 13px;
+  pointer-events: none;
+}
+.onbtn {
+  bottom: 20px;
+  left: 12px;
+}
+.ofbtn {
+  bottom: 20px;
+  right: 12px;
+  color: #4cae4c;
+}
+.jozziyt-box {
+  border: 1px solid #eee;
+  border-radius: 30px;
+  padding: 44px 30px;
+}
+
+.laghvBtn {
+  padding: 0 13px;
+  border: 2px solid #be4a4a;
+  border-radius: 10px;
+  background-color: #be4a4a;
+  text-align: center;
+  direction: rtl;
+  height: 58px;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+}
+.laghvBtn:hover,
+.laghvBtn:focus {
+  outline: none;
+}
+.gheymat {
+  margin-top: 6rem;
+  background-color: #8fecbc;
+  text-align: center;
+  border-radius: 30px;
+  padding: 20px;
+  font-size: 22px;
+}
+/**********************/
+.sabtsefaresh {
+  border: 1px solid darkgrey;
+  border-radius: 13px;
+  float: right;
+  padding: 10px 17px;
+  font-size: 16px;
+  margin: 0 3rem;
+}
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 0;
+  cursor: pointer;
+  font-size: 17px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-top: 8px;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: white;
+  border: 3px solid #4abe82;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 7px;
+  top: 1px;
+  width: 7px;
+  height: 14px;
+  border: solid #4abe82;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.modal-header h4 {
+  font-size: 19px;
+}
+/********مدال لغو سفارش*****/
+
+.parent-laghv-r {
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.laghv-r {
+  margin-top: 2rem;
+  text-align: center;
+  background-color: #993bcc;
+  padding: 10px 20px;
+  font-size: 17px;
+  border-radius: 40px;
+  color: white;
+  direction: rtl;
+  cursor: pointer;
+}
+
+.text-lagh {
+  padding: 80px 40px;
+  color: black;
+  line-height: 33px;
+}
+

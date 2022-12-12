@@ -1,0 +1,78 @@
+/*******************fonts*******************/
+@font-face {font-family:"IRANSans";src: url('../font/ttf/IRANSansWeb(FaNum).ttf');}@font-face {font-family:"IRANSans_Black";src: url('../font/ttf/IRANSansWeb(FaNum)_Black.ttf');  }  @font-face {font-family:"IRANSans_Bold"; src: url('../font/ttf/IRANSansWeb(FaNum)_Bold.ttf');} @font-face{font-family:"IRANSans_Light"; src: url('../font/ttf/IRANSansWeb(FaNum)_Light.ttf');  } @font-face {font-family:"IRANSans_Medium";src: url('../font/ttf/IRANSansWeb(FaNum)_Medium.ttf');  } @font-face {font-family:"IRANSans_UltraLight";src: url('../font/ttf/IRANSansWeb(FaNum)_UltraLight.ttf');} .SansLight{font-family:"IRANSans_Light";} .SansBold{font-family:"IRANSans_Bold";}.Sansblack{font-family:"IRANSans_Black";}  .SansMedium{font-family:"IRANSans_Medium";} .SansUltraLight{font-family:"IRANSans_UltraLight";}  .IRANSans{font-family:"IRANSans";}
+/*******************fonts*******************/
+html,body{
+    direction: rtl!important;
+    text-align: right!important;
+    padding: 0!important;
+    margin: 0!important;
+    width: 100%;
+}
+.multi-level, .item ul, .nav input[type="checkbox"] {
+    display: none;
+}
+#menu:checked ~ .multi-level, .item input:checked ~ ul {
+    display: block;
+}
+/*arrow*/
+.arrow{
+    width: 12px;
+    height: 12px;
+    vertical-align: middle;
+    float:right;
+    z-index: 0;
+    margin: 17px 1em 0 -2em;
+}
+.item input + .arrow {
+    transform: rotate(90deg);
+    transition: 0.3s;
+}
+.item input:checked + .arrow {
+    transform: rotate(0deg);
+    transition: 0.3s;
+}
+/**/
+label{
+    cursor: pointer;
+}
+label{
+    width: 100%;
+    z-index: 3;
+    display: block;
+    position: relative;
+}
+.nav {
+    width: 100%;
+    background-color: white;
+    overflow-x: hidden;
+    border-bottom: 1px solid saddlebrown;
+}
+#nav-icon{
+    font-size: 28px;
+    line-height:10px;
+    padding: 1em;
+    color: white;
+    background-color:#4cae4c;
+}
+.nav ul, .nav li, label {
+    line-height: 50px;
+    margin: 0;
+    padding: 0 3em;
+    list-style: none;
+    text-decoration: none;
+    color: #4cae4c;
+    font-weight: 100;
+    width: 100%;
+}
+.item ul {
+    padding: 0 0.25em;
+}
+.nav li a {
+    line-height: 50px;
+    margin: 0;
+    padding: 0 2em;
+    list-style: none;
+    text-decoration: none;
+    color:black;
+    font-weight: 100
+}
