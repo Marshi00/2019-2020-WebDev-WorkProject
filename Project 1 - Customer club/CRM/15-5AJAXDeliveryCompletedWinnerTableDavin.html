@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../../Css/Bootstrap.css" rel="stylesheet">
+    <script src="../../Js/JQuery.js"></script>
+    <script src="../../Js/Bootstrap.js"></script>
+</head>
+<body>
+<div CLASS="col-sm-8 col-xs-8 col-md-6 col-lg-6 col-sm-offset-2 col-xs-offset-2 col-md-offset-3 col-lg-offset-3" style="text-align: center;margin-top: 300px">
+
+    <div class="alert alert-success" id="Success" style="visibility: hidden">
+        <strong>Success!</strong> Indicates a successful or positive action.
+    </div>
+    <div class="alert alert-danger" id="Wrong" style="display: none">
+        <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+    </div>
+    <input type="button" class="btn-primary" onclick="sendParams()" value="Submit" style="padding: 5px 100px">
+</div>
+<script>
+    function sendParams() {
+        var DeliveryDate,DeliveryTime;
+        DeliveryDate=document.getElementById('A1').value;
+        DeliveryTime=document.getElementById('A2').value;
+        if (DeliveryDate==''){
+            document.getElementById('A1').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='PLease enter your email';
+            return;
+        }
+        if (DeliveryTime==''){
+            document.getElementById('A2').style.border='2px solid red';
+            document.getElementById('Success').style.visibility='hidden';
+            document.getElementById('Wrong').style.display='block';
+            document.getElementById('Wrong').innerText='PLease enter your email';
+            return;
+        }
+        $.ajax({
+            url: "15-2DeliveryCompletedWinnerTableDavin.php",
+            data:{
+                DeliveryDate:DeliveryDate,
+                DeliveryTime:DeliveryTime,
+            },
+            dataType:"json",
+            type:"POST",
+            success : function (jsonData) {
+                if (jsonData['error']){
+                    document.getElementById('Success').style.visibility='hidden';
+                    document.getElementById('Wrong').style.display='block';
+                    document.getElementById('Wrong').innerText=jsonData['MSG'];
+                }
+                else {
+                    document.getElementById('Success').style.visibility='visible';
+                    // document.getElementById('Success').innerText=jsonData['name'];
+                    // window.location.href="index.php";
+                }
+
+            }
+        });
+
+    }
+</script>
+</body>
+</html>
