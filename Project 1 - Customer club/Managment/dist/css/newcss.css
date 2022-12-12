@@ -1,0 +1,106 @@
+
+/*----------login page----------*/
+/*--------alert box------*/
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.closebtn:hover {
+    color: black;
+}
+.fa-id-card{
+    padding: 7px 7px !important;
+    font-size: 1.5vw !important;
+}
+.fa-key{
+    padding: 0 8px !important;
+    padding-top: 6px !important;
+    font-size: 1.5vw !important;
+}
+.alert.success{
+    visibility: hidden;
+    padding: 20px;
+    color: white;
+    background-color: #4CAF50 !important;
+    font-size: 20px;
+    margin: auto;
+    margin-top: 30px !important;
+    border-radius: 3em;
+}
+.alert.warning {
+    margin: auto;
+    display: none;
+    font-size: 20px;
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    border-radius: 3em;
+    margin-top: 30px !important;
+}
+.btnl61{
+    border-radius:2em !important;
+}
+.btnl61:hover{
+    box-shadow: 0px 5px 11px 3px #504783;
+}
+.pl36{
+    margin-bottom: 30px;
+}
+/*------------------nav style-------------------*/
+.imgl23{
+    opacity: .8;
+}
+.imgl33{
+
+}
+.cpr{
+    padding-right: 20px;
+    font-size: 0.9vw;
+}
+.cpr>i{
+    font-size: 0.8vw !important;
+    margin-left: 0 !important;
+}
+.dl32{
+    vertical-align: top;
+    float: right !important;
+}
+.dl35{
+    text-align: right;
+}
+.idl48{
+    text-align: unset !important;
+}
+.fa-home,fa-calendar-plus-o{
+    font-size: 1.3vw;
+}
+.apr{
+    padding-right: 10px !important;
+}
+.apr1{
+    padding-right: 14px;
+}
+.apr2{
+    padding-right: 12px;
+}
+.apr3{
+    padding-right: 13px;
+}
+.apr4 {
+    padding-right: 11.5px;
+}
+.apr5 {
+    padding-right: 16px;
+}
+.apr6{
+    padding-right: 16px;
+}
+.apr7{
+    padding-right: 15px;
+}
