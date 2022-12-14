@@ -50,12 +50,12 @@ See requirements.txt
 
 <img src="img/gg2.jpg"  width="1100">
 <p align="center">
-<img src="img/gg3.jpeg"  width="400">
-<img src="img/gg4.jpeg"  width="400">
+<img src="img/gg3.jpeg"  >
+<img src="img/gg4.jpeg"  >
 </>
 <p align="center">
-<img src="img/gg5.jpeg"  width="550">
-<img src="img/gg6.jpeg"  width="550">
+<img src="img/gg5.png"  width="400">
+<img src="img/gg6.png"  width="400">
 </>
 
 ---
