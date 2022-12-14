@@ -21,7 +21,7 @@
 <p align="center">
   <a href="#About">About</a> •
   <a href="#Credit">Credit</a> •
-  <a href="#Screen">Screen</a> •
+  <a href="#Screen">Screen Samples</a> •
 
 </p>
 
@@ -46,14 +46,17 @@ This software uses the following open source packages:
 <p></p>
 See requirements.txt
 
-## Screen
+## Screen 
 
-<img src="imag/gg1.jpg"  width="1100">
-
-
-
-
-
+<img src="img/gg2.jpg"  width="1100">
+<p align="center">
+<img src="img/gg3.jpeg"  width="400">
+<img src="img/gg4.jpeg"  width="400">
+</>
+<p align="center">
+<img src="img/gg5.jpeg"  width="550">
+<img src="img/gg6.jpeg"  width="550">
+</>
 
 ---
 
